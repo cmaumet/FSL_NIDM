@@ -38,9 +38,6 @@ if not os.path.isdir(NIDM_DIR):
 NIDM_RESULTS_DIR = os.path.join(NIDM_DIR, "nidm", "nidm-results")
 TERM_RESULTS_DIRNAME = "terms"
 TEST_DIR = os.path.dirname(os.path.abspath(__file__))
-# FIXME: Do we rather want test data in a temp dir? If so, how to avoid
-# download everytime?
-TEST_DATA_DIR = os.path.join(TEST_DIR, "data")
 ORIGINAL_TEST_DATA_DIR = os.path.join(TEST_DIR, "original_data")
 
 path = os.path.join(NIDM_RESULTS_DIR, "test")
@@ -50,6 +47,8 @@ sys.path.append(path)
 from TestResultDataModel import TestResultDataModel
 from TestCommons import *
 from CheckConsistency import *
+import git
+import tempfile
 
 from ddt import ddt, data
 
@@ -65,6 +64,57 @@ class TestFSLResultDataModel(unittest.TestCase, TestResultDataModel):
 
     @classmethod
     def setUpClass(cls):
+        # Check if a directory was specified to store test data (otherwise
+        # create a temporary folder)
+        test_configfile = os.path.join(TEST_DIR, "config.json")
+        if os.path.isfile(test_configfile):
+            with open(test_configfile) as config_file:
+                test_config = json.load(config_file)
+                test_data_dir = test_config['test_data_folder']
+        else:
+            test_data_dir = tempfile.mkdtemp()
+
+        if not os.path.isdir(os.path.join(test_data_dir, ".git")):
+            logging.debug("Cloning to " + test_data_dir)
+            # Cloning test data repository
+            data_repo = git.Repo.clone_from(
+                "https://github.com/incf-nidash/nidmresults-examples.git",
+                test_data_dir)
+        else:
+            # Updating test data repository
+            logging.debug("Updating repository at " + test_data_dir)
+            data_repo = git.Repo(test_data_dir)
+            origin = data_repo.remote("origin")
+            origin.pull()
+
+        # Find all test data to be compared with ground truth
+        # test_files = glob.glob(os.path.join(TEST_DATA_DIR, '*', '*.ttl'))
+        test_dirs = next(os.walk(test_data_dir))[1]
+        test_dirs.remove(".git")
+        test_dirs.remove("ground_truth")
+        for data_dirname in test_dirs:
+            data_dir = os.path.join(test_data_dir, data_dirname)
+            with open(os.path.join(data_dir, 'config.json'))\
+                    as data_file:
+                metadata = json.load(data_file)
+            version = metadata["version"]
+            software = metadata["software"]
+
+            if software.lower() == "fsl":
+                logging.debug("Computing NIDM FSL export")
+                fslnidm = FSLtoNIDMExporter(feat_dir=data_dir, version=version)
+                fslnidm.parse()
+                export_dir = fslnidm.export()
+                # Copy provn export to test directory
+                shutil.copy(os.path.join(export_dir, 'nidm.provn'),
+                            os.path.join(provn))
+                shutil.copy(os.path.join(export_dir, 'nidm.ttl'),
+                            os.path.join(ttl))
+            else:
+                print software
+
+        # Original data directory => this will be replaced by data stored at
+        # https://github.com/incf-nidash/nidmresults-examples
         # *** Once for all, run the export
         for ttl_name in test_files:
             ttl = TEST_DIR+ttl_name

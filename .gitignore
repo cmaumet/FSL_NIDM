@@ -1,4 +1,5 @@
 *.pyc
+test/config.json
 test/data/*
 test/original_data/*
 
