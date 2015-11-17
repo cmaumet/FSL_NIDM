@@ -1,5 +1,6 @@
 *.pyc
 test/data/*
+test/original_data/*
 
 nidm/*
 build/*

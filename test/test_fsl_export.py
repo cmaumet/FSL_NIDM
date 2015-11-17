@@ -38,7 +38,10 @@ if not os.path.isdir(NIDM_DIR):
 NIDM_RESULTS_DIR = os.path.join(NIDM_DIR, "nidm", "nidm-results")
 TERM_RESULTS_DIRNAME = "terms"
 TEST_DIR = os.path.dirname(os.path.abspath(__file__))
+# FIXME: Do we rather want test data in a temp dir? If so, how to avoid
+# download everytime?
 TEST_DATA_DIR = os.path.join(TEST_DIR, "data")
+ORIGINAL_TEST_DATA_DIR = os.path.join(TEST_DIR, "original_data")
 
 path = os.path.join(NIDM_RESULTS_DIR, "test")
 sys.path.append(path)
@@ -71,7 +74,7 @@ class TestFSLResultDataModel(unittest.TestCase, TestResultDataModel):
             # then compute a fresh export
             with open(os.path.join(test_dir, 'config.json')) as data_file:
                 metadata = json.load(data_file)
-            data_dir = os.path.join(TEST_DATA_DIR, metadata["data_dir"])
+            data_dir = os.path.join(ORIGINAL_TEST_DATA_DIR, metadata["data_dir"])
             version = metadata["version"]
 
             #  Turtle file obtained with FSL NI-DM export tool
