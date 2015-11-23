@@ -13,6 +13,7 @@ install:
  # Packages only needed for testing
  - pip install vcrpy
  - pip install ddt
+ - pip install gitpython
 # command to run tests, e.g. python setup.py test
 script:  
  - python test/test_install.py  
