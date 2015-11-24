@@ -52,7 +52,7 @@ class ExportTestData(object):
 
         # Not sure why this is needed on Travis CI to get the files 
         # (instead of pointers)
-        check_call("cd "+test_data_dir+ "; git checkout .", shell=True)
+        # check_call("cd "+test_data_dir+ "; git checkout .", shell=True)
 
         # print "\n\n\n --------------------"
         # check_call("cd "+test_data_dir+ "; git lfs ls-files", shell=True)
