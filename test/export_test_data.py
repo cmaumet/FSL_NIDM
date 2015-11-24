@@ -3,7 +3,6 @@ import json
 import git
 import tempfile
 import logging
-from subprocess import check_call
 
 RELPATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -46,15 +45,12 @@ class ExportTestData(object):
             data_repo = git.Repo.clone_from(
                 "https://github.com/incf-nidash/nidmresults-examples.git",
                 test_data_dir)
-            check_call("cd " + test_data_dir + ";git lfs track \"*.nii.gz\"", shell=True)
         else:
             # Updating test data repository
             logging.debug("Updating repository at " + test_data_dir)
             data_repo = git.Repo(test_data_dir)
             origin = data_repo.remote("origin")
             origin.pull()
-        # Get real files from git lfs (instead of pointers)
-        check_call("cd " + test_data_dir + ";git lfs pull", shell=True)
 
         # Find all test data to be compared with ground truth
         # test_files = glob.glob(os.path.join(TEST_DATA_DIR, '*', '*.ttl'))
