@@ -12,10 +12,8 @@ NIDM_DIR = os.path.join(RELPATH, "nidm")
 # the nidm directory will be accessed directly
 logging.debug(NIDM_DIR)
 
-if not os.path.isdir(NIDM_DIR):
-    NIDM_DIR = os.path.join(os.path.dirname(RELPATH), "nidm")
-    # The FSL export to NIDM will only be run locally (for now)
-    from nidmfsl.fsl_exporter.fsl_exporter import FSLtoNIDMExporter
+# The FSL export to NIDM will only be run locally (for now)
+from nidmfsl.fsl_exporter.fsl_exporter import FSLtoNIDMExporter
 
 
 logger = logging.getLogger(__name__)
