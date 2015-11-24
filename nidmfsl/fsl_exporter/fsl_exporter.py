@@ -12,7 +12,7 @@ import sys
 import glob
 import json
 import numpy as np
-import subprocess
+from subprocess import check_call
 import warnings
 
 # If "nidmresults" code is available locally work on the source code (used
@@ -875,13 +875,25 @@ class FSLtoNIDMExporter(NIDMExporter, object):
                 cmd = cmd_match.group("cmd")
                 cmd = cmd.replace("stats/smoothness", "stats/smoothness_v")
                 cmd = cmd.replace("smoothest", "smoothest -V")
-                subprocess.call("cd "+analysis_dir+";"+cmd, shell=True)
 
-                with open(smoothness_file+"_v", "r") as fp:
-                    smoothness_txt = fp.read()
+                # FIXME: check if FSL is available on the system
+                try:
+                    check_call("cd "+analysis_dir+";"+cmd, shell=True)
+                    with open(smoothness_file+"_v", "r") as fp:
+                        smoothness_txt = fp.read()
 
-                sm_match = re.search(sm_reg, smoothness_txt, re.DOTALL)
-                d = sm_match.groupdict()
+                    sm_match = re.search(sm_reg, smoothness_txt, re.DOTALL)
+                    d = sm_match.groupdict()
+                except Exception:
+                    warnings.warn(
+                        "FSL not found, noise FWHM will not be reported")
+                    noise_fwhm_in_voxels = None
+                    noise_fwhm_in_units = None
+
+                    # Load DLH, VOLUME and RESELS
+                    d = dict()
+                    d['DLH'], d['volume'], d['vox_per_resels'] = \
+                        np.loadtxt(smoothness_file, usecols=[1])
 
         vol_in_units = float(d['volume'])*np.prod(
             json.loads(self.coord_space.voxel_size))
