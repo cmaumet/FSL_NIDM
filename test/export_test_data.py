@@ -3,6 +3,7 @@ import json
 import git
 import tempfile
 import logging
+from subprocess import check_call
 
 RELPATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -14,7 +15,6 @@ logging.debug(NIDM_DIR)
 
 # The FSL export to NIDM will only be run locally (for now)
 from nidmfsl.fsl_exporter.fsl_exporter import FSLtoNIDMExporter
-
 
 logger = logging.getLogger(__name__)
 # Display log messages in console
@@ -49,6 +49,15 @@ class ExportTestData(object):
             data_repo = git.Repo(test_data_dir)
             origin = data_repo.remote("origin")
             origin.pull()
+
+        print "\n\n\n --------------------"
+        check_call("cd "+test_data_dir+ "; git lfs ls-files", shell=True)
+        print "\n\n\n --------------------"        
+        check_call("cd "+test_data_dir+ "; git lfs pull", shell=True)        
+        print "\n\n\n --------------------"        
+        print "cat "+test_data_dir+ "/fsl_voxelwise_p0001/design.png"
+        check_call("cat "+test_data_dir+ "/fsl_voxelwise_p0001/design.png", shell=True)
+        print "\n\n\n --------------------"
 
         # Find all test data to be compared with ground truth
         # test_files = glob.glob(os.path.join(TEST_DATA_DIR, '*', '*.ttl'))
