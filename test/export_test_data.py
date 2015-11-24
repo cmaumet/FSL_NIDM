@@ -50,14 +50,9 @@ class ExportTestData(object):
             origin = data_repo.remote("origin")
             origin.pull()
 
-        print "\n\n\n --------------------"
-        check_call("cd "+test_data_dir+ "; git lfs ls-files", shell=True)
-        print "\n\n\n --------------------"        
-        check_call("cd "+test_data_dir+ "; git lfs pull", shell=True)        
-        print "\n\n\n --------------------"        
-        print "cat "+test_data_dir+ "/fsl_voxelwise_p0001/design.png"
-        check_call("cat "+test_data_dir+ "/fsl_voxelwise_p0001/design.png", shell=True)
-        print "\n\n\n --------------------"
+        # Not sure why this is needed on Travis CI to get the files
+        # (instead of pointers)
+        check_call("cd " + test_data_dir + "; git checkout .", shell=True)
 
         # Find all test data to be compared with ground truth
         # test_files = glob.glob(os.path.join(TEST_DATA_DIR, '*', '*.ttl'))
