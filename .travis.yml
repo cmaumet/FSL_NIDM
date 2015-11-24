@@ -14,6 +14,10 @@ install:
  - pip install vcrpy
  - pip install ddt
  - pip install gitpython
+ # install git lfs
+ - curl -sLo - https://github.com/github/git-lfs/releases/download/v1.1.0/git-lfs-linux-amd64-1.1.0.tar.gz | tar xzvf -
+ - cd git-lfs-*
+ - ./install.sh
 # command to run tests, e.g. python setup.py test
 script:  
  - python test/test_install.py  
