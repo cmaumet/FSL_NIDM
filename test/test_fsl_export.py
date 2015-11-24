@@ -113,10 +113,6 @@ class TestFSLResultDataModel(unittest.TestCase, TestResultDataModel):
             os.path.join(os.path.dirname(owl_file),
                          os.pardir, os.pardir, "imports", '*.ttl'))
 
-        print test_data_dir
-        print testexport.test_data_dir
-        print os.path.join(test_data_dir, "ground_truth")
-
         TestResultDataModel.setUp(
             self, owl_file, import_files, test_files,
             test_data_dir,

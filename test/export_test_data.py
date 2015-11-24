@@ -3,7 +3,6 @@ import json
 import git
 import tempfile
 import logging
-from subprocess import check_call
 
 RELPATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -35,8 +34,6 @@ class ExportTestData(object):
         """
         test_data_dir = self.test_data_dir
 
-        print test_data_dir
-        print os.path.join(test_data_dir, ".git")
         if not os.path.isdir(os.path.join(test_data_dir, ".git")):
             logging.debug("Cloning to " + test_data_dir)
             # Cloning test data repository
@@ -50,34 +47,13 @@ class ExportTestData(object):
             origin = data_repo.remote("origin")
             origin.pull()
 
-        # Not sure why this is needed on Travis CI to get the files 
-        # (instead of pointers)
-        # check_call("cd "+test_data_dir+ "; git checkout .", shell=True)
-
-        # print "\n\n\n --------------------"
-        # check_call("cd "+test_data_dir+ "; git lfs ls-files", shell=True)
-        # print "\n\n\n --------------------"        
-            
-        # print "\n\n\n --------------------"        
-        # print "file "+test_data_dir+ "/fsl_voxelwise_p0001/stats/sigmasquareds.nii.gz"
-        # check_call("file "+test_data_dir+ "/fsl_voxelwise_p0001/stats/sigmasquareds.nii.gz", shell=True)
-        # check_call("file "+test_data_dir+ "/fsl_voxelwise_p0001/design.png", shell=True)
-        # print "\n\n\n --------------------"
-
         # Find all test data to be compared with ground truth
         # test_files = glob.glob(os.path.join(TEST_DATA_DIR, '*', '*.ttl'))
         test_dirs = next(os.walk(test_data_dir))[1]
-        print "\n\n\n --------------------"      
-        print "test_dirs"
-        print test_dirs
-        print "\n\n\n --------------------"      
         test_dirs.remove(".git")
         test_dirs.remove("ground_truth")
 
         test_files = list()
-
-        test_dirs = [test_dirs[1]]
-        print test_dirs
 
         for data_dirname in test_dirs:
             data_dir = os.path.join(test_data_dir, data_dirname)
