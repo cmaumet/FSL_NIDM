@@ -8,7 +8,9 @@ install:
  # install git lfs
  - curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
  - sudo apt-get install git-lfs=1.1.0
+ - git lfs install
  - pip --version 
+ - git --version
  # Install current version of nidmresults
  - pip install git+https://github.com/incf-nidash/nidmresults.git#egg=nidmresults
 # Install current version of nidmfsl
