@@ -60,12 +60,13 @@ if os.path.isfile(test_configfile):
         test_data_dir = test_config['test_data_folder']
 
 testexport = ExportTestData(test_data_dir)
+test_data_dir = testexport.test_data_dir
 test_files = testexport.export_all()
 
 # # Find all test examples to be compared with ground truth
 # test_files = glob.glob(os.path.join(TEST_DIR, 'fsl_*', 'nidm', '*.ttl'))
 # # For test name readability remove path to test file
-test_files = [x.replace(testexport.test_data_dir, "") for x in test_files]
+test_files = [x.replace(test_data_dir, "") for x in test_files]
 logging.info("Test files:\n\t" + "\n\t".join(test_files))
 
 @ddt
@@ -111,6 +112,10 @@ class TestFSLResultDataModel(unittest.TestCase, TestResultDataModel):
         import_files = glob.glob(
             os.path.join(os.path.dirname(owl_file),
                          os.pardir, os.pardir, "imports", '*.ttl'))
+
+        print test_data_dir
+        print testexport.test_data_dir
+        print os.path.join(test_data_dir, "ground_truth")
 
         TestResultDataModel.setUp(
             self, owl_file, import_files, test_files,
