@@ -1,4 +1,7 @@
 language: python
+cache:
+  directories:
+   - nidmresults-examples
 # Enable Travis container-based infrastructure
 sudo: true
 python:
