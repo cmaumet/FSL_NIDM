@@ -20,6 +20,8 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(filename='debug.log', level=logging.DEBUG, filemode='w',
                     format='%(levelname)s - %(message)s')
 TEST_DIR = os.path.dirname(os.path.abspath(__file__))
+print TEST_DIR
+
 
 class ExportTestData(object):
     def __init__(self, test_data_dir=None):
@@ -58,16 +60,18 @@ class ExportTestData(object):
             data_dir = os.path.join(test_data_dir, data_dirname)
             with open(os.path.join(data_dir, 'config.json'))\
                     as data_file:
+                print os.path.join(data_dir, 'config.json')
                 metadata = json.load(data_file)
             version = metadata["version"]
             software = metadata["software"]
 
             if software.lower() == "fsl":
-                logging.debug("Computing NIDM FSL export")
-                fslnidm = FSLtoNIDMExporter(feat_dir=data_dir, version=version)
-                fslnidm.parse()
-                nidm_dir = fslnidm.export()
-                test_files.append(os.path.join(nidm_dir, "nidm.ttl"))
+                print "ignoring FSL for now"
+                # logging.debug("Computing NIDM FSL export")
+                # fslnidm = FSLtoNIDMExporter(feat_dir=data_dir, version=version)
+                # fslnidm.parse()
+                # nidm_dir = fslnidm.export()
+                # test_files.append(os.path.join(nidm_dir, "nidm.ttl"))
             else:
                 print software
 

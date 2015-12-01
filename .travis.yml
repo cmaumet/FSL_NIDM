@@ -1,7 +1,11 @@
 language: python
-cache:
-  directories:
-   - nidmresults-examples
+addons:
+	apt:
+		sources:
+		- chef-stable-precise
+# cache:
+#   directories:
+#    - nidmresults-examples
 # Enable Travis container-based infrastructure
 sudo: true
 python:
