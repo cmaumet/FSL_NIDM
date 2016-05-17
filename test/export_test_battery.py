@@ -41,13 +41,13 @@ if __name__ == '__main__':
             # the git-lfs files
             try:
                 print cmd
+                print 'Retry #'+str(it)
                 out = subprocess.check_output(cmd, shell=True)
                 print out
                 break
             except subprocess.CalledProcessError as e:
                 if e.returncode == 128:
                     it = it + 1
-                    print 'Retry #'+str(it)
 
     config_file = os.path.join(TEST_DIR, 'config.json')
     if os.path.isfile(config_file):
@@ -96,7 +96,12 @@ if __name__ == '__main__':
         except subprocess.CalledProcessError as e:
             # 128 -> git-lfs download error: "Error downloading object"
             if e.returncode == 128:
+                print "Error FOUND -- retrying"
                 retry_lfs_download(checkout_cmd)
+            else:
+                print "Print other Error FOUND --> ??"
+                print e.returncode
+        print "except finished ++++++"
 
         # Pull latest updates
         # "git stash" gives the repo one more chance to checkout the
