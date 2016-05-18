@@ -104,17 +104,18 @@ if __name__ == '__main__':
         print "except finished ++++++"
 
         # Pull latest updates
-        # "git stash" gives the repo one more chance to checkout the
-        # git-lfs files if the download failed
         pull_cmd = ["cd " + test_data_dir +
-                    "; git pull origin " + branch_name + "; git stash"]
+                    "; git pull origin " + branch_name]
         try:
             print pull_cmd
             subprocess.check_call(pull_cmd, shell=True)
         except subprocess.CalledProcessError as e:
             # 128 -> git-lfs download error: "Error downloading object"
             if e.returncode == 128:
-                retry_lfs_download(pull_cmd)
+                # "git stash" gives the repo one more chance to checkout the
+                # git-lfs files if the download failed
+                stash_cmd = ["cd " + test_data_dir + "; git stash"]
+                retry_lfs_download(stash_cmd)
 
         # Check current branch and status
         subprocess.call(["cd " + test_data_dir + "; git branch"], shell=True)
