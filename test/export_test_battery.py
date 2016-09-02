@@ -186,15 +186,17 @@ if __name__ == '__main__':
                         data_dir, os.path.basename(data_dir) + ".nidm.zip")
 
                     # Copy ttl export to test directory
-                    test_export_dir = os.path.join(
-                        EXPORTED_TEST_DIR,
-                        'ex_' + test_name + '_' + version_str)
+                    ex_name = 'ex_' + test_name + '_' + version_str
+                    test_export_dir = os.path.join(EXPORTED_TEST_DIR, ex_name)
 
                     if not os.path.exists(test_export_dir):
                         os.makedirs(test_export_dir)
 
                     with zipfile.ZipFile(zipped_dir) as z:
                         z.extract('nidm.ttl', test_export_dir)
+
+                    # temporary
+                    shutil.copy(zipped_dir, test_export_dir)
 
                     cfg_file = os.path.join(test_export_dir, 'config.json')
 
