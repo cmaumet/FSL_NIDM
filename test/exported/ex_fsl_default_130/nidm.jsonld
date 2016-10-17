@@ -1,0 +1,1143 @@
+[
+  {
+    "@graph": [
+      {
+        "@id": "_:Na973b62f35384c23868dfb1e68f1c92b",
+        "@type": [
+          "http://www.w3.org/ns/prov#Generation"
+        ],
+        "http://www.w3.org/ns/prov#activity": [
+          {
+            "@id": "http://iri.nidash.org/a0971f2c-1160-40e0-bd5b-c5ac3abb7f01"
+          }
+        ],
+        "http://www.w3.org/ns/prov#atTime": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "@value": "2016-10-17T13:11:05.101749"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/9a63124a-22eb-429b-b263-7807926f5526",
+        "@type": [
+          "http://www.w3.org/ns/prov#Entity",
+          "http://purl.org/nidash/nidm#NIDM_0000027",
+          "http://www.w3.org/ns/prov#Bundle"
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000127": [
+          {
+            "@value": "1.3.0"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "NIDM-Results"
+          }
+        ],
+        "http://www.w3.org/ns/prov#qualifiedGeneration": [
+          {
+            "@id": "_:Na973b62f35384c23868dfb1e68f1c92b"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/4a115742-100c-4c3a-8e53-3b1b3fbce876",
+        "@type": [
+          "http://www.w3.org/ns/prov#SoftwareAgent",
+          "http://www.w3.org/ns/prov#Agent",
+          "http://purl.org/nidash/nidm#NIDM_0000167"
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000122": [
+          {
+            "@value": "1.1.0"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "nidmfsl"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/a0971f2c-1160-40e0-bd5b-c5ac3abb7f01",
+        "@type": [
+          "http://www.w3.org/ns/prov#Activity"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "NIDM-Results export"
+          }
+        ],
+        "http://www.w3.org/ns/prov#wasAssociatedWith": [
+          {
+            "@id": "http://iri.nidash.org/4a115742-100c-4c3a-8e53-3b1b3fbce876"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@graph": [
+      {
+        "@id": "http://iri.nidash.org/2fe34367-0af1-401d-bfaf-a0d97d9f69bb",
+        "@type": [
+          "http://www.w3.org/ns/prov#Collection",
+          "http://www.w3.org/ns/prov#Entity",
+          "http://purl.org/nidash/nidm#NIDM_0000169"
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000096": [
+          {
+            "@value": true
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000124": [
+          {
+            "@value": 10000.0
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000172": [
+          {
+            "@id": "http://uri.neuinfo.org/nif/nifstd/birnlex_2250"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Data"
+          }
+        ],
+        "http://www.w3.org/ns/prov#wasAttributedTo": [
+          {
+            "@id": "http://iri.nidash.org/9e2af411-8136-4237-848d-f38743c1677f"
+          },
+          {
+            "@id": "http://iri.nidash.org/a89f6d85-d3f2-45a6-bb80-50a1b5583cb8"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/503c006b-c899-4879-9663-df4683064b51",
+        "@type": [
+          "http://www.w3.org/ns/prov#Activity",
+          "http://purl.org/nidash/nidm#NIDM_0000001"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Contrast estimation: tone counting vs baseline"
+          }
+        ],
+        "http://www.w3.org/ns/prov#used": [
+          {
+            "@id": "http://iri.nidash.org/2f294c23-2423-49b0-8d80-523d04e8bb1c"
+          },
+          {
+            "@id": "http://iri.nidash.org/7fa36106-1aaa-4f97-b101-e40720c2b555"
+          },
+          {
+            "@id": "http://iri.nidash.org/eddc0aee-9dcb-449f-bcb0-f0990cf80a57"
+          }
+        ],
+        "http://www.w3.org/ns/prov#wasAssociatedWith": [
+          {
+            "@id": "http://iri.nidash.org/f89cc04e-8062-45ef-815e-54895ca8fefa"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/8937f2ac-cdd2-4e67-b6de-f1bb2bd0c428",
+        "@type": [
+          "http://www.w3.org/ns/prov#Entity",
+          "http://purl.org/dc/dcmitype/Image"
+        ],
+        "http://purl.org/dc/terms/format": [
+          {
+            "@value": "image/png"
+          }
+        ],
+        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName": [
+          {
+            "@value": "DesignMatrix.png"
+          }
+        ],
+        "http://www.w3.org/ns/prov#atLocation": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "@value": "DesignMatrix.png"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/e7e9541c-bd75-4f8a-afa3-800f16129ac8",
+        "@type": [
+          "http://purl.org/nidash/nidm#NIDM_0000013",
+          "http://www.w3.org/ns/prov#Entity"
+        ],
+        "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#sha512": [
+          {
+            "@value": "5f6c299048c1245e76c1c3ea09e6bf78ebf21e7380b2abf6ef8e0ca40723cbbbb731c436e99d458324aaa884cf97e42736f26e46d182ae16640c2ce8db1fdb4c"
+          }
+        ],
+        "http://purl.org/dc/terms/format": [
+          {
+            "@value": "image/nifti"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000104": [
+          {
+            "@id": "http://iri.nidash.org/234e24ce-08ff-416b-9867-02aca9412c79"
+          }
+        ],
+        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName": [
+          {
+            "@value": "ContrastStandardError.nii.gz"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Contrast Standard Error Map"
+          }
+        ],
+        "http://www.w3.org/ns/prov#atLocation": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "@value": "ContrastStandardError.nii.gz"
+          }
+        ],
+        "http://www.w3.org/ns/prov#wasDerivedFrom": [
+          {
+            "@id": "http://iri.nidash.org/23c94c41-45ba-4a24-bfc2-ced05e252876"
+          }
+        ],
+        "http://www.w3.org/ns/prov#wasGeneratedBy": [
+          {
+            "@id": "http://iri.nidash.org/503c006b-c899-4879-9663-df4683064b51"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/974e8e5b-9f29-44bc-b0e7-4cfefa2ec7dc",
+        "@type": [
+          "http://purl.org/nidash/fsl#FSL_0000002",
+          "http://www.w3.org/ns/prov#Entity"
+        ],
+        "http://purl.org/nidash/fsl#FSL_0000004": [
+          {
+            "@value": 60.0
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "FSL's Gaussian Running Line Drift Model"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/90a05700-8f6e-4c69-964a-ceaaa3c00c17",
+        "@type": [
+          "http://purl.obolibrary.org/obo/STATO_0000323",
+          "http://www.w3.org/ns/prov#Entity"
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000085": [
+          {
+            "@value": "tone counting vs baseline"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000123": [
+          {
+            "@id": "http://purl.obolibrary.org/obo/STATO_0000176"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Contrast Weights: tone counting vs baseline"
+          }
+        ],
+        "http://www.w3.org/ns/prov#value": [
+          {
+            "@value": "[1, 0]"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/2a01eb8e-7128-46a9-a209-7d7ed64abcd6",
+        "@type": [
+          "http://www.w3.org/ns/prov#Entity",
+          "http://purl.org/nidash/nidm#NIDM_0000076"
+        ],
+        "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#sha512": [
+          {
+            "@value": "07ddd4fabb8409815459be622465fdb1462fcba124be9a521fbd51ea6d03c582dc4cae2b08cdecd0662e19ac958b5c37a58d3da6b6ee05ae212039a31f91056d"
+          }
+        ],
+        "http://purl.org/dc/terms/format": [
+          {
+            "@value": "image/nifti"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000085": [
+          {
+            "@value": "tone counting vs baseline"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000091": [
+          {
+            "@value": 1.0
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000093": [
+          {
+            "@value": Infinity
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000104": [
+          {
+            "@id": "http://iri.nidash.org/234e24ce-08ff-416b-9867-02aca9412c79"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000123": [
+          {
+            "@id": "http://purl.obolibrary.org/obo/STATO_0000376"
+          }
+        ],
+        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName": [
+          {
+            "@value": "ZStatistic.nii.gz"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Z-Statistic Map: tone counting vs baseline"
+          }
+        ],
+        "http://www.w3.org/ns/prov#atLocation": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "@value": "ZStatistic.nii.gz"
+          }
+        ],
+        "http://www.w3.org/ns/prov#wasGeneratedBy": [
+          {
+            "@id": "http://iri.nidash.org/503c006b-c899-4879-9663-df4683064b51"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/0510b11c-24ca-4be4-b096-528ecf7efc85",
+        "@type": [
+          "http://www.w3.org/ns/prov#Entity",
+          "http://purl.org/nidash/nidm#NIDM_0000068"
+        ],
+        "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#sha512": [
+          {
+            "@value": "d092708a9c256b3573fbe1a932f4998af141739de2ac94ca58d57af814dde086a15f49b09093ac57041123c716d195f08ebc3e2fd0bec12832068154e1816b0e"
+          }
+        ],
+        "http://purl.org/dc/terms/format": [
+          {
+            "@value": "image/nifti"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000104": [
+          {
+            "@id": "http://iri.nidash.org/234e24ce-08ff-416b-9867-02aca9412c79"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000120": [
+          {
+            "@value": true
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000121": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#int",
+            "@value": "38344"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000136": [
+          {
+            "@value": 1872265.625
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000145": [
+          {
+            "@value": 0.700797
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000148": [
+          {
+            "@value": 6.60989
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000149": [
+          {
+            "@value": 5801.004252718275
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000157": [
+          {
+            "@value": "[7.30301, 7.28026, 6.07038]"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000159": [
+          {
+            "@value": "[2.33696, 2.32968, 1.21408]"
+          }
+        ],
+        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName": [
+          {
+            "@value": "SearchSpaceMask.nii.gz"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Search Space Mask Map"
+          }
+        ],
+        "http://www.w3.org/ns/prov#atLocation": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "@value": "SearchSpaceMask.nii.gz"
+          }
+        ],
+        "http://www.w3.org/ns/prov#wasGeneratedBy": [
+          {
+            "@id": "http://iri.nidash.org/4a4e7e80-4b25-44c1-9b65-67be9826261a"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/2a60a902-fc1e-4797-a0c7-433682f5c72e",
+        "@type": [
+          "http://www.w3.org/ns/prov#Entity",
+          "http://purl.org/nidash/nidm#NIDM_0000023"
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000089": [
+          {
+            "@id": "http://purl.org/nidash/nidm#NIDM_0000074"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000094": [
+          {
+            "@value": true
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000100": [
+          {
+            "@id": "http://purl.obolibrary.org/obo/STATO_0000357"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000101": [
+          {
+            "@id": "http://purl.obolibrary.org/obo/STATO_0000227"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000126": [
+          {
+            "@id": "http://purl.org/nidash/nidm#NIDM_0000073"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/c6160c7a-ccea-46eb-80a0-3347fce70f4d",
+        "@type": [
+          "http://purl.org/nidash/nidm#NIDM_0000076",
+          "http://www.w3.org/ns/prov#Entity"
+        ],
+        "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#sha512": [
+          {
+            "@value": "38649b9e17afa0cbd95002eaffdd81f81d61b06fd8c5f4cf1d614e494d2d3ec3b97e1d808f5a6c92134a506aaa85b19eeefcb9b0a30d68788e9ef02b3e1fcb62"
+          }
+        ],
+        "http://purl.org/dc/terms/format": [
+          {
+            "@value": "image/nifti"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000085": [
+          {
+            "@value": "tone counting vs baseline"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000091": [
+          {
+            "@value": 1.0
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000093": [
+          {
+            "@value": 102.0
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000104": [
+          {
+            "@id": "http://iri.nidash.org/234e24ce-08ff-416b-9867-02aca9412c79"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000123": [
+          {
+            "@id": "http://purl.obolibrary.org/obo/STATO_0000176"
+          }
+        ],
+        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName": [
+          {
+            "@value": "TStatistic.nii.gz"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "T-Statistic Map: tone counting vs baseline"
+          }
+        ],
+        "http://www.w3.org/ns/prov#atLocation": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "@value": "TStatistic.nii.gz"
+          }
+        ],
+        "http://www.w3.org/ns/prov#wasGeneratedBy": [
+          {
+            "@id": "http://iri.nidash.org/503c006b-c899-4879-9663-df4683064b51"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/eddc0aee-9dcb-449f-bcb0-f0990cf80a57",
+        "@type": [
+          "http://www.w3.org/ns/prov#Entity",
+          "http://purl.org/nidash/nidm#NIDM_0000061"
+        ],
+        "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#sha512": [
+          {
+            "@value": "f2df3de73c023be1d8d1f73703e3ffdbf08b69a27ae304cdf053e8639da9e579fd21a52a66584e04c865239f408bd30d7b5e690985ce7a20ccd2a50c3306fd55"
+          }
+        ],
+        "http://purl.org/dc/terms/format": [
+          {
+            "@value": "image/nifti"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000104": [
+          {
+            "@id": "http://iri.nidash.org/234e24ce-08ff-416b-9867-02aca9412c79"
+          }
+        ],
+        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName": [
+          {
+            "@value": "pe1.nii.gz"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Parameter estimate 1"
+          }
+        ],
+        "http://www.w3.org/ns/prov#wasGeneratedBy": [
+          {
+            "@id": "http://iri.nidash.org/c00ecdea-e7dc-4047-be6f-ed05dded4ee5"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/a89f6d85-d3f2-45a6-bb80-50a1b5583cb8",
+        "@type": [
+          "http://www.w3.org/ns/prov#Agent"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Person"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/0ae8533a-8292-414a-a558-9c352dd6113c",
+        "@type": [
+          "http://purl.org/dc/dcmitype/Image",
+          "http://www.w3.org/ns/prov#Entity"
+        ],
+        "http://purl.org/dc/terms/format": [
+          {
+            "@value": "image/png"
+          }
+        ],
+        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName": [
+          {
+            "@value": "ExcursionSet.png"
+          }
+        ],
+        "http://www.w3.org/ns/prov#atLocation": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "@value": "ExcursionSet.png"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/cfb34979-22b3-4b88-bde6-5101b9e20cdb",
+        "@type": [
+          "http://purl.org/nidash/nidm#NIDM_0000019",
+          "http://www.w3.org/ns/prov#Entity"
+        ],
+        "http://purl.org/dc/elements/1.1/description": [
+          {
+            "@id": "http://iri.nidash.org/8937f2ac-cdd2-4e67-b6de-f1bb2bd0c428"
+          }
+        ],
+        "http://purl.org/dc/terms/format": [
+          {
+            "@value": "text/csv"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000021": [
+          {
+            "@value": "[\"tone_counting\", \"tone_counting*temporal_derivative\", \"tone_counting_probe\", \"tone_counting_probe*temporal_derivative\"]"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000088": [
+          {
+            "@id": "http://iri.nidash.org/974e8e5b-9f29-44bc-b0e7-4cfefa2ec7dc"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000102": [
+          {
+            "@id": "http://purl.org/nidash/fsl#FSL_0000006"
+          }
+        ],
+        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName": [
+          {
+            "@value": "DesignMatrix.csv"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Design Matrix"
+          }
+        ],
+        "http://www.w3.org/ns/prov#atLocation": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "@value": "DesignMatrix.csv"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/234e24ce-08ff-416b-9867-02aca9412c79",
+        "@type": [
+          "http://www.w3.org/ns/prov#Entity",
+          "http://purl.org/nidash/nidm#NIDM_0000016"
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000090": [
+          {
+            "@value": "[64, 64, 30]"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000105": [
+          {
+            "@id": "http://purl.org/nidash/nidm#NIDM_0000077"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000112": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#int",
+            "@value": "3"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000131": [
+          {
+            "@value": "[3.125, 3.125, 5.0]"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000132": [
+          {
+            "@value": "[[-3.125, 0.0, 0.0, 100.0], [0.0, 3.125, 0.0, -100.0], [0.0, 0.0, 5.0, -75.0], [0.0, 0.0, 0.0, 1.0]]"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000133": [
+          {
+            "@value": "[\"mm\", \"mm\", \"mm\"]"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Coordinate space"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/9b59b56a-9e0d-418b-b90c-6622077a6847",
+        "@type": [
+          "http://purl.org/nidash/nidm#NIDM_0000026",
+          "http://www.w3.org/ns/prov#Entity",
+          "http://purl.obolibrary.org/obo/STATO_0000039"
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000084": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#int",
+            "@value": "0"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Extent Threshold: k>=0"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/590a6cca-aa08-4737-8acc-c2a5711071b7",
+        "@type": [
+          "http://purl.org/nidash/nidm#NIDM_0000002",
+          "http://www.w3.org/ns/prov#Entity"
+        ],
+        "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#sha512": [
+          {
+            "@value": "f2df3de73c023be1d8d1f73703e3ffdbf08b69a27ae304cdf053e8639da9e579fd21a52a66584e04c865239f408bd30d7b5e690985ce7a20ccd2a50c3306fd55"
+          }
+        ],
+        "http://purl.org/dc/terms/format": [
+          {
+            "@value": "image/nifti"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000085": [
+          {
+            "@value": "tone counting vs baseline"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000104": [
+          {
+            "@id": "http://iri.nidash.org/234e24ce-08ff-416b-9867-02aca9412c79"
+          }
+        ],
+        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName": [
+          {
+            "@value": "Contrast.nii.gz"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Contrast Map: tone counting vs baseline"
+          }
+        ],
+        "http://www.w3.org/ns/prov#atLocation": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "@value": "Contrast.nii.gz"
+          }
+        ],
+        "http://www.w3.org/ns/prov#wasGeneratedBy": [
+          {
+            "@id": "http://iri.nidash.org/503c006b-c899-4879-9663-df4683064b51"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/48989c27-f987-45b4-b9c7-cd89e8dc857e",
+        "@type": [
+          "http://purl.org/nidash/nidm#NIDM_0000008",
+          "http://www.w3.org/ns/prov#Entity"
+        ],
+        "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#sha512": [
+          {
+            "@value": "8d5e00e26766e3c836724f32e4cbaf0a1cd7cee6453883e7a57d253d56cd81e5eb93841bce0c4c39e905d5b3c0bd05954ea7bd5b20f0d84c2ac70478f6571ea7"
+          }
+        ],
+        "http://purl.org/dc/terms/format": [
+          {
+            "@value": "image/nifti"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000104": [
+          {
+            "@id": "http://iri.nidash.org/234e24ce-08ff-416b-9867-02aca9412c79"
+          }
+        ],
+        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName": [
+          {
+            "@value": "ClusterLabels.nii.gz"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Cluster Labels Map"
+          }
+        ],
+        "http://www.w3.org/ns/prov#atLocation": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "@value": "ClusterLabels.nii.gz"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/f89cc04e-8062-45ef-815e-54895ca8fefa",
+        "@type": [
+          "http://scicrunch.org/resolver/SCR_002823",
+          "http://www.w3.org/ns/prov#SoftwareAgent",
+          "http://www.w3.org/ns/prov#Agent"
+        ],
+        "http://purl.org/nidash/fsl#FSL_0000005": [
+          {
+            "@value": "6.00"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000122": [
+          {
+            "@value": "5.0.x"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "FSL"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/4a4e7e80-4b25-44c1-9b65-67be9826261a",
+        "@type": [
+          "http://purl.org/nidash/nidm#NIDM_0000049",
+          "http://www.w3.org/ns/prov#Activity"
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000097": [
+          {
+            "@id": "http://purl.org/nidash/nidm#NIDM_0000060"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Inference: tone counting vs baseline"
+          }
+        ],
+        "http://www.w3.org/ns/prov#used": [
+          {
+            "@id": "http://iri.nidash.org/2a01eb8e-7128-46a9-a209-7d7ed64abcd6"
+          },
+          {
+            "@id": "http://iri.nidash.org/9b59b56a-9e0d-418b-b90c-6622077a6847"
+          },
+          {
+            "@id": "http://iri.nidash.org/157c4b02-3ad3-43aa-b773-96540697247c"
+          }
+        ],
+        "http://www.w3.org/ns/prov#wasAssociatedWith": [
+          {
+            "@id": "http://iri.nidash.org/f89cc04e-8062-45ef-815e-54895ca8fefa"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/c07b3409-ff7e-4321-9fbc-b8355607bae2",
+        "@type": [
+          "http://www.w3.org/ns/prov#Entity",
+          "http://purl.org/nidash/nidm#NIDM_0000025"
+        ],
+        "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#sha512": [
+          {
+            "@value": "d20b80683d8cf569e6c146bc4fe44506567004f1c0bf9b3571fa99e76e4f009146938a2b0b051198a46dbf7a6cd8d9701a20cf8eebe2e8f061216c1d772bb83e"
+          }
+        ],
+        "http://purl.org/dc/elements/1.1/description": [
+          {
+            "@id": "http://iri.nidash.org/0ae8533a-8292-414a-a558-9c352dd6113c"
+          }
+        ],
+        "http://purl.org/dc/terms/format": [
+          {
+            "@value": "image/nifti"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000098": [
+          {
+            "@id": "http://iri.nidash.org/48989c27-f987-45b4-b9c7-cd89e8dc857e"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000104": [
+          {
+            "@id": "http://iri.nidash.org/234e24ce-08ff-416b-9867-02aca9412c79"
+          }
+        ],
+        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName": [
+          {
+            "@value": "ExcursionSet.nii.gz"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Excursion Set Map"
+          }
+        ],
+        "http://www.w3.org/ns/prov#atLocation": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "@value": "ExcursionSet.nii.gz"
+          }
+        ],
+        "http://www.w3.org/ns/prov#wasGeneratedBy": [
+          {
+            "@id": "http://iri.nidash.org/4a4e7e80-4b25-44c1-9b65-67be9826261a"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/7fa36106-1aaa-4f97-b101-e40720c2b555",
+        "@type": [
+          "http://www.w3.org/ns/prov#Entity",
+          "http://purl.org/nidash/nidm#NIDM_0000066"
+        ],
+        "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#sha512": [
+          {
+            "@value": "61d38cc67f56974aabcb7b4aaf32868cb0a3f7a4b3ec2d2bf867d889907073ad0ea6aa51e419f6e4dedd6659d56eff879c9ed17e4da903807ed7fce4a2d6efbb"
+          }
+        ],
+        "http://purl.org/dc/terms/format": [
+          {
+            "@value": "image/nifti"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000104": [
+          {
+            "@id": "http://iri.nidash.org/234e24ce-08ff-416b-9867-02aca9412c79"
+          }
+        ],
+        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName": [
+          {
+            "@value": "ResidualMeanSquares.nii.gz"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Residual Mean Squares Map"
+          }
+        ],
+        "http://www.w3.org/ns/prov#atLocation": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "@value": "ResidualMeanSquares.nii.gz"
+          }
+        ],
+        "http://www.w3.org/ns/prov#wasGeneratedBy": [
+          {
+            "@id": "http://iri.nidash.org/c00ecdea-e7dc-4047-be6f-ed05dded4ee5"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/23c94c41-45ba-4a24-bfc2-ced05e252876",
+        "@type": [
+          "http://www.w3.org/ns/prov#Entity",
+          "http://purl.org/nidash/nidm#NIDM_0000135"
+        ],
+        "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#sha512": [
+          {
+            "@value": "32ec7259f2c39d9b242965331145529a1efbfb5b32e133b7e5b93b8ba4d566bf476f0ffac79e9ae0bb49e3db419cc1da9e6f9b7b070194dc1be124bab11a9fc8"
+          }
+        ],
+        "http://purl.org/dc/terms/format": [
+          {
+            "@value": "image/nifti"
+          }
+        ],
+        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName": [
+          {
+            "@value": "varcope1.nii.gz"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/e1dbd44f-080e-40d1-9c19-1933c1e7b17c",
+        "@type": [
+          "http://purl.org/nidash/nidm#NIDM_0000061",
+          "http://www.w3.org/ns/prov#Entity"
+        ],
+        "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#sha512": [
+          {
+            "@value": "43cd79a08a78b1873136d33e871af5a5bc85ab6e8193b8dfd2c5add4765c91ae502be137dbab45d38f13ddc74d82cf06ecd5ea633841afdd4df589c14be9e345"
+          }
+        ],
+        "http://purl.org/dc/terms/format": [
+          {
+            "@value": "image/nifti"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000104": [
+          {
+            "@id": "http://iri.nidash.org/234e24ce-08ff-416b-9867-02aca9412c79"
+          }
+        ],
+        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName": [
+          {
+            "@value": "pe2.nii.gz"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Parameter estimate 2"
+          }
+        ],
+        "http://www.w3.org/ns/prov#wasGeneratedBy": [
+          {
+            "@id": "http://iri.nidash.org/c00ecdea-e7dc-4047-be6f-ed05dded4ee5"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/c00ecdea-e7dc-4047-be6f-ed05dded4ee5",
+        "@type": [
+          "http://www.w3.org/ns/prov#Activity",
+          "http://purl.org/nidash/nidm#NIDM_0000056"
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000134": [
+          {
+            "@id": "http://purl.obolibrary.org/obo/STATO_0000372"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Model Parameters Estimation"
+          }
+        ],
+        "http://www.w3.org/ns/prov#used": [
+          {
+            "@id": "http://iri.nidash.org/2fe34367-0af1-401d-bfaf-a0d97d9f69bb"
+          },
+          {
+            "@id": "http://iri.nidash.org/2a60a902-fc1e-4797-a0c7-433682f5c72e"
+          },
+          {
+            "@id": "http://iri.nidash.org/cfb34979-22b3-4b88-bde6-5101b9e20cdb"
+          }
+        ],
+        "http://www.w3.org/ns/prov#wasAssociatedWith": [
+          {
+            "@id": "http://iri.nidash.org/f89cc04e-8062-45ef-815e-54895ca8fefa"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/157c4b02-3ad3-43aa-b773-96540697247c",
+        "@type": [
+          "http://purl.org/nidash/nidm#NIDM_0000160",
+          "http://purl.org/nidash/nidm#NIDM_0000034",
+          "http://www.w3.org/ns/prov#Entity"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Height Threshold: p<0.001 (uncorrected)"
+          }
+        ],
+        "http://www.w3.org/ns/prov#value": [
+          {
+            "@value": 0.001
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/2f294c23-2423-49b0-8d80-523d04e8bb1c",
+        "@type": [
+          "http://www.w3.org/ns/prov#Entity",
+          "http://purl.org/nidash/nidm#NIDM_0000054"
+        ],
+        "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#sha512": [
+          {
+            "@value": "d092708a9c256b3573fbe1a932f4998af141739de2ac94ca58d57af814dde086a15f49b09093ac57041123c716d195f08ebc3e2fd0bec12832068154e1816b0e"
+          }
+        ],
+        "http://purl.org/dc/terms/format": [
+          {
+            "@value": "image/nifti"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000104": [
+          {
+            "@id": "http://iri.nidash.org/234e24ce-08ff-416b-9867-02aca9412c79"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000106": [
+          {
+            "@value": false
+          }
+        ],
+        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName": [
+          {
+            "@value": "Mask.nii.gz"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Mask"
+          }
+        ],
+        "http://www.w3.org/ns/prov#atLocation": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "@value": "Mask.nii.gz"
+          }
+        ],
+        "http://www.w3.org/ns/prov#wasGeneratedBy": [
+          {
+            "@id": "http://iri.nidash.org/c00ecdea-e7dc-4047-be6f-ed05dded4ee5"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/9e2af411-8136-4237-848d-f38743c1677f",
+        "@type": [
+          "http://www.w3.org/ns/prov#Agent",
+          "http://uri.neuinfo.org/nif/nifstd/birnlex_2100"
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "MRI Scanner"
+          }
+        ]
+      },
+      {
+        "@id": "http://iri.nidash.org/45755a4d-fb23-465d-a5cc-d5b0b2a19a5d",
+        "@type": [
+          "http://www.w3.org/ns/prov#Entity",
+          "http://purl.org/nidash/nidm#NIDM_0000033"
+        ],
+        "http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions#sha512": [
+          {
+            "@value": "46d5f0f323c77faec3fd8ec1e608b3d9cb6697528b279bcac746129041a07b1c0af7f3396bc43a41417361b5d9f03b271f8769123111f56fa27e2a8069bdf14d"
+          }
+        ],
+        "http://purl.org/dc/terms/format": [
+          {
+            "@value": "image/nifti"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000104": [
+          {
+            "@id": "http://iri.nidash.org/234e24ce-08ff-416b-9867-02aca9412c79"
+          }
+        ],
+        "http://purl.org/nidash/nidm#NIDM_0000107": [
+          {
+            "@value": 9565.2548828125
+          }
+        ],
+        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName": [
+          {
+            "@value": "GrandMean.nii.gz"
+          }
+        ],
+        "http://www.w3.org/2000/01/rdf-schema#label": [
+          {
+            "@value": "Grand Mean Map"
+          }
+        ],
+        "http://www.w3.org/ns/prov#atLocation": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "@value": "GrandMean.nii.gz"
+          }
+        ],
+        "http://www.w3.org/ns/prov#wasGeneratedBy": [
+          {
+            "@id": "http://iri.nidash.org/c00ecdea-e7dc-4047-be6f-ed05dded4ee5"
+          }
+        ]
+      }
+    ],
+    "@id": "http://iri.nidash.org/9a63124a-22eb-429b-b263-7807926f5526"
+  }
+]
