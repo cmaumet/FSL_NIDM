@@ -1,0 +1,10 @@
+{
+    "ground_truth": [
+        "thr_voxeluncp001/nidm.ttl",
+        "hrf_fslgamma/nidm.ttl",
+        "con_t/nidm.ttl",
+        "alt_onetailed/nidm.ttl"
+    ],
+    "inclusive": true,
+    "version": "1.2.0"
+}

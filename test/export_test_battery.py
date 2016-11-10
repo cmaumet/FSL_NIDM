@@ -66,7 +66,7 @@ if __name__ == '__main__':
             data_dir = data_dir[:-1]
 
         test_name = os.path.basename(data_dir)
-        if metadata["software"].lower() == "fsl":
+        if metadata["software"].lower() == "fsl" and test_name in ["fsl_default"]:
             logging.debug("Computing NIDM FSL export for " + test_name)
 
             versions = metadata["versions"]
@@ -117,6 +117,8 @@ if __name__ == '__main__':
                         os.makedirs(test_export_dir)
 
                     with zipfile.ZipFile(zipped_dir) as z:
+                        z.extract('nidm.provn', test_export_dir)
+                        z.extract('nidm.jsonld', test_export_dir)
                         z.extract('nidm.ttl', test_export_dir)
 
                     cfg_file = os.path.join(test_export_dir, 'config.json')
@@ -155,4 +157,4 @@ if __name__ == '__main__':
                             sub_gt_dir, os.path.basename(gt)))
 
                     # delete nidm export folder
-                    os.remove(zipped_dir)
+                    # os.remove(zipped_dir)
